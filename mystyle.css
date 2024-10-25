@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@keyframes sharte {
+    0% {
+        text-shadow: 2px 3px 0px #723fff;
+        color: white;
+    }
+
+    100% {
+        text-shadow: 0px 3px 0px #35e060;
+        color: white;
+    }
+
+}
+
+::selection {
+    color: rgb(111, 0, 255);
+    background: rgb(0, 255, 213);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    cursor: crosshair;
+}
+
+body {
+    background-color: #111111;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+    color: white;
+    font-family: "Space Mono ", monospace;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: help;
+}
+
+
+nav {
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-title a {
+    color: rgb(17, 17, 17);
+    letter-spacing: 5px;
+}
+
+.nav-p a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 25vw;
+    /*responsive*/
+    top: 8px;
+}
+
+#page-nav ul li {
+    margin: 1rem;
+}
+
+.hero-message-container {
+    margin: 30vh 5rem;
+    margin-bottom: 50vh;
+    line-height: 1.5;
+}
+
+.h2-1 {
+    color: #35e060;
+    font-size: 1.3em;
+}
+
+.p-1 {
+    margin: 2.5rem 0;
+    color: #888888;
+    font-size: 1.2rem;
+}
+
+.p-2 {
+    font-size: 1.3rem;
+
+}
+
+
+.hero-message-container p a {
+    box-shadow: inset 0 0 0 0 #723fff;
+    color: #723fff;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.hero-message-container p a:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 #723fff;
+    ;
+}
+
+
+.link-h2 {
+    text-align: center;
+    animation-name: sharte;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.link {
+    color: white;
+}
+
+.media-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0 300px 0;
+}
+
+#img1 {
+    width: 600px;
+}
+
+#img2 {
+    width: 350px;
+}
+
+#img3 {
+    width: 550px;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.473);
+    margin-top: 2rem;
+}
+
+.vid-con {
+    display: flex;
+    justify-content: center;
+}
+
+.link-h2:last-child {
+    margin: 4rem 0 4rem 0;
+}
+
+footer {
+    margin: 5rem 0 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: gray;
+}
