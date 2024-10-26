@@ -11,23 +11,40 @@
 <body>
     <main>
         <div id="title-jump-point"></div>
-        <nav>
-            <span class="title">
+        <header>
+            <div class="header_content">
                 <h1>MY CSTU STORY</h1>
-            </span>
-            <button id="actBtn" class="openbtn" onclick="setHeight()">&#9776;</button>
-            <div class="hidden">
-                <ul class="nav_list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">My Journey</a></li>
-                    <li><a href="">My future</a></li>
-                </ul>
+                <div id="ham" class="ham">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <nav id="nav">
+                    <ul class="nav_list">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">My Journey</a></li>
+                        <li><a href="">My future</a></li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
-        <div id="mySidepanel" class="sidepanel hidden">
-            <a href="#">Home</a>
-            <a href="#">My Journey</a>
-            <a href="#">My Future</a>
+        </header>
+        <div class="main_message_con">
+            <div class="message_con">
+                <h1>Phonlakrit Chaimanee</h1>
+                <h2>COMSCI / THAMMASAT U.</h2>
+                <p class="p1">from bangkhen , thailand<br>
+                    this website is all about my journey and my future in cstu<br></p>
+                <p class="p2">You can follow me on <span class="br_for_mobile"><a
+                            href="https://github.com/Chaun361">GITHUB</a> or <a
+                            href="https://www.instagram.com/chaun361/">INSTAGRAM</a></span></p>
+            </div>
+            <img class="message_gif" src="./resources/giphy.gif">
+        </div>
+        <h2 class="grid_h2">This is Where I study</h2>
+        <div class="grid1">
+            <div class="frame1"><img class="img1" src="./resources/cs.jpg"></div>
+            <div class="frame2"><img class="img2" src="./resources/cs101.jpg"></div>
+            <div class="frame3"><img class="img3" src="./resources/lc2.jpg"></div>
         </div>
     </main>
     <footer>
@@ -36,29 +53,12 @@
         </cite>
     </footer>
     <script>
-        const sidePanel = document.getElementById("mySidepanel");
-        const actionBtn = document.getElementById("actBtn")
-        /*function navToggle() {
-            const isOpen = sidePanel.classList.contains("hidden");
-            if (isOpen) {
-                actionBtn.innerHTML = "&times;"
-            }
-            else {
-                actionBtn.innerHTML = "&#9776"
-            }
-            sidePanel.classList.toggle("hidden");
-        }*/
-
-        function setHeight() {
-            const isClose = actionBtn.innerHTML.includes('&#9776;');
-            console.log(isClose);
-            if (isClose) {
-                sidePanel.style.height = "100vh";
-            }
-            else {
-                actionBtn.innerHTML = "&#9776"
-            }
-        }
+        const ham = document.querySelector(".ham");
+        const nav = document.querySelector("#nav");
+        ham.addEventListener("click", () => {
+            nav.classList.toggle("open-nav");
+            ham.classList.toggle("open-ham");
+        });
 
     </script>
 </body>
