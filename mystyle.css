@@ -28,7 +28,6 @@
 
 body {
     background-color: #111111;
-    height: 5000px;
     padding-top: 70px;
 }
 
@@ -151,11 +150,12 @@ nav a:focus {
     box-shadow: inset 200px 0 0 0 #723fff;
 }
 
-.message_gif {
+.message_mypic {
     position: absolute;
     right: 150px;
-    top: 200px;
+    top: 250px;
     z-index: -1;
+    width: 300px;
 }
 
 .grid_h2 {
@@ -201,6 +201,34 @@ nav a:focus {
     width: inherit;
     height: inherit;
     object-fit: cover;
+}
+
+.vid-con {
+    display: flex;
+    justify-content: center;
+    margin: 20rem auto 5rem auto;
+}
+
+video {
+    width: 800px;
+    height: 450px;
+}
+
+.link-h2 {
+    text-align: center;
+    animation-name: sharte;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+footer {
+    margin: 5rem 0 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: gray;
 }
 
 .open-nav {
@@ -266,7 +294,7 @@ nav a:focus {
         margin: 30vh 5rem;
     }
 
-    .message_gif {
+    .message_mypic {
         display: none;
     }
 
@@ -297,6 +325,11 @@ nav a:focus {
         grid-column: 2;
         width: 100%;
         height: 100%;
+    }
+
+    video {
+        width: 600px;
+        height: 250px;
     }
 
 }
@@ -366,5 +399,9 @@ nav a:focus {
         height: 300px;
     }
 
+    video {
+        width: 500px;
+        height: 150px;
+    }
 
 }
